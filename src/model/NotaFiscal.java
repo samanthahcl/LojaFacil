@@ -1,3 +1,5 @@
+package model;
+
 public class NotaFiscal {
 
     private static int contador = 1;
@@ -11,12 +13,21 @@ public class NotaFiscal {
         json.append("  \"funcionario\": \"").append(venda.getFuncionario().getNome()).append("\",\n");
         json.append("  \"itens\": [\n");
 
-        for (ItemVenda item : venda.getItens()) {
+        for (int i = 0; i < venda.getItens().size(); i++) {
+            ItemVenda item = venda.getItens().get(i);
+
             json.append("    {\n");
             json.append("      \"produto\": \"").append(item.getProduto().getNome()).append("\",\n");
             json.append("      \"quantidade\": ").append(item.getQuantidade()).append(",\n");
             json.append("      \"subtotal\": ").append(item.getSubtotal()).append("\n");
-            json.append("    },\n");
+            json.append("    }");
+
+            // Adiciona vírgula apenas se NÃO for o último item
+            if (i < venda.getItens().size() - 1) {
+                json.append(",");
+            }
+
+            json.append("\n");
         }
 
         json.append("  ],\n");
