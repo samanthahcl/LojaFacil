@@ -19,8 +19,9 @@ public class Atendimento {
     }
 
     public void mostrar() {
-        System.out.println("\nmodel.Atendimento de " + cliente.getNome());
+        System.out.println("\nAtendimento de " + cliente.getNome());
         System.out.println("Descrição: " + descricao);
         System.out.println("Status: " + status);
     }
+
 }

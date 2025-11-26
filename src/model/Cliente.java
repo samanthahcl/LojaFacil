@@ -10,4 +10,9 @@ public class Cliente extends Pessoa {
     }
 
     public String getEmail() { return email; }
+
+    public void setEmail(String email) {   // <-- adiciona isso
+        this.email = email;
+    }
+
 }

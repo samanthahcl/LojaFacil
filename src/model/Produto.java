@@ -21,4 +21,9 @@ public class Produto {
     public void reduzirEstoque(int quantidade) {
         this.estoque -= quantidade;
     }
+
+    public void setPreco(double preco) {   // <-- adiciona isso
+        this.preco = preco;
+    }
+
 }
