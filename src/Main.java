@@ -136,7 +136,7 @@ public class Main {
             scanner.next();
         }
         double valor = scanner.nextDouble();
-        scanner.nextLine(); // consome \n
+        scanner.nextLine();
         return valor;
     }
 
@@ -146,7 +146,7 @@ public class Main {
             scanner.next();
         }
         int valor = scanner.nextInt();
-        scanner.nextLine(); // consome \n
+        scanner.nextLine();
         return valor;
     }
 

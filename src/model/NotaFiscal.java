@@ -22,7 +22,7 @@ public class NotaFiscal {
             json.append("      \"subtotal\": ").append(item.getSubtotal()).append("\n");
             json.append("    }");
 
-            // Adiciona vírgula apenas se NÃO for o último item
+            // add vírgula
             if (i < venda.getItens().size() - 1) {
                 json.append(",");
             }
